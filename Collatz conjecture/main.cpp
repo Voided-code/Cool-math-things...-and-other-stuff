@@ -55,7 +55,7 @@
 using namespace std;
 
 int main() {
-    long long totalTime = 0, stepTime = 0, nanosecond = pow(10, 9), current = 2, heighestSteps = 0, heighestNumber = 0, heighestTime = 0;
+    long long totalTime = 0, stepTime = 0, nanosecond = pow(10, 9), current = 2, heighestSteps = 0, heighestNumber = 0, heighestTime = 0, timeNumber = 0;
     
     while (true) {
         int n = current, steps = 0;
@@ -83,12 +83,13 @@ int main() {
         
         if(duration.count() > heighestTime){
             heighestTime = duration.count();
+            timeNumber = current;
         }
 
         if(stepTime > 0.25 * nanosecond){
             system("cls");
             cout << "Heighest: " << heighestNumber << " with " << heighestSteps << " steps\n" << 
-            "Heighest time: " << heighestTime << " nanoseconds\n" <<
+            "Heighest time: " << heighestTime << " nanoseconds, no. " << timeNumber << "\n" << 
             "Current No.: " << current << " with " << steps << " steps\n" << 
             "Time taken: " << duration.count() << " nanoseconds\n" << 
             "Avg time: " << totalTime / current << " nanoseconds\n";

@@ -55,7 +55,7 @@
 using namespace std;
 
 int main() {
-    const int min = 2, lim = 500000;
+    const int min = 2, lim = 10000;
     int tries = 1;
     auto start = std::chrono::high_resolution_clock::now();
     
@@ -69,7 +69,7 @@ int main() {
             long long c = sqrt(c2);
 
             if (c * c == c2) {
-                printf("%d, %d, %d : %d\n", a, b, c, tries);
+                printf("%d, %d, %d\n%d\n\n", a, b, c, tries);
             }
 
             ++tries;

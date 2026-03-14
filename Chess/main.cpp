@@ -55,40 +55,40 @@
 using namespace std;
 
 void printBoard (vector<vector<int>> inp) {
-    // for (int i = 0; i < 8; i++) {
-    //     for (int j = 0; j < 8; j++) {
-    //         if(inp[i][j] == 11){
-    //             cerr << "♙ ";
-    //         } else if(inp[i][j] == 10){
-    //             cerr << "♟ ";
-    //         } else if(inp[i][j] == 21){
-    //             cerr << "♖ ";
-    //         } else if(inp[i][j] == 20){
-    //             cerr << "♜ ";
-    //         } else if(inp[i][j] == 31){
-    //             cerr << "♘ ";
-    //         } else if(inp[i][j] == 30){
-    //             cerr << "♞ ";
-    //         } else if(inp[i][j] == 41){
-    //             cerr << "♗ ";
-    //         } else if(inp[i][j] == 40){
-    //             cerr << "♝ ";
-    //         } else if(inp[i][j] == 51){
-    //             cerr << "♕ ";
-    //         } else if(inp[i][j] == 50){
-    //             cerr << "♛ ";
-    //         } else if(inp[i][j] == 61){
-    //             cerr << "♔ ";
-    //         } else if(inp[i][j] == 60){
-    //             cerr << "♚ ";
-    //         } else {
-    //             cerr << "  ";
-    //         }
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if(inp[i][j] == 11){
+                cerr << "♙ ";
+            } else if(inp[i][j] == 10){
+                cerr << "♟ ";
+            } else if(inp[i][j] == 21){
+                cerr << "♖ ";
+            } else if(inp[i][j] == 20){
+                cerr << "♜ ";
+            } else if(inp[i][j] == 31){
+                cerr << "♘ ";
+            } else if(inp[i][j] == 30){
+                cerr << "♞ ";
+            } else if(inp[i][j] == 41){
+                cerr << "♗ ";
+            } else if(inp[i][j] == 40){
+                cerr << "♝ ";
+            } else if(inp[i][j] == 51){
+                cerr << "♕ ";
+            } else if(inp[i][j] == 50){
+                cerr << "♛ ";
+            } else if(inp[i][j] == 61){
+                cerr << "♔ ";
+            } else if(inp[i][j] == 60){
+                cerr << "♚ ";
+            } else {
+                cerr << "  ";
+            }
             
-    //     }
-    //     cerr << endl;
-    // }
-    // cerr << "\n----------------\n\n";
+        }
+        cerr << endl;
+    }
+    cerr << "\n----------------\n\n";
 }
 
 void testPosition (vector<vector<vector<int>>> boards) {
