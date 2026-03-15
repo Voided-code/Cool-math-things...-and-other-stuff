@@ -6,4 +6,4 @@ I just put random projects here ig
 - chess
 - collatz conjecture
 - pythagorean triples
-+ primes
+- primes
