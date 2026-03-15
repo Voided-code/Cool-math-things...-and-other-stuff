@@ -7,3 +7,4 @@ I just put random projects here ig
 - collatz conjecture
 - pythagorean triples
 - primes
++ fibonacci sequence
