@@ -55,7 +55,8 @@
 using namespace std;
 
 int main() {
-    long long totalTime = 0, stepTime = 0, nanosecond = pow(10, 9), current = 2, heighestSteps = 0, heighestNumber = 0, heighestTime = 0, timeNumber = 0;
+    const int nanosecond = pow(10, 9);
+    long long totalTime = 0, stepTime = 0, current = 2, heighestSteps = 0, heighestNumber = 0, heighestTime = 0, timeNumber = 0;
     
     while (true) {
         int n = current, steps = 0;
@@ -72,17 +73,17 @@ int main() {
         }
         
         auto end = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
-        stepTime += duration.count();
-        totalTime += duration.count();
+        auto duration = (std::chrono::duration_cast<std::chrono::nanoseconds>(end - start)).count();
+        stepTime += duration;
+        totalTime += duration;
         
         if(steps > heighestSteps){
             heighestSteps = steps;
             heighestNumber = current;
         }
         
-        if(duration.count() > heighestTime){
-            heighestTime = duration.count();
+        if(duration > heighestTime){
+            heighestTime = duration;
             timeNumber = current;
         }
 
@@ -91,7 +92,7 @@ int main() {
             cout << "Heighest: " << heighestNumber << " with " << heighestSteps << " steps\n" << 
             "Heighest time: " << heighestTime << " nanoseconds, no. " << timeNumber << "\n" << 
             "Current No.: " << current << " with " << steps << " steps\n" << 
-            "Time taken: " << duration.count() << " nanoseconds\n" << 
+            "Time taken: " << duration << " nanoseconds\n" << 
             "Avg time: " << totalTime / current << " nanoseconds\n";
             
             stepTime = 0;
